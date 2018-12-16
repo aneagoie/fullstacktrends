@@ -1,0 +1,9 @@
+.footLinks li a {
+    color: #274d7c;
+}
+.footLinks li a:hover {
+    color: #474747;
+}
+.footSocial i {
+    color: #274d7c;
+}
