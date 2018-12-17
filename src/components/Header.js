@@ -7,10 +7,10 @@ class Header extends Component {
         return (
             <div>
                 <nav className="navbar navbar-light">
-                    <a className="navbar-brand" href="#"><img src={logo} alt="logo" height="50" /></a>
+                    <a className="navbar-brand" href="/#"><img src={logo} alt="logo" height="50" /></a>
                     <div className="mr-5">
-                        <a href="#" className="btn btn-outline-primary mx-2">Newsletter</a>
-                        <a href="#" className="btn btn-outline-primary mx-2">Data</a>
+                        <a href="/#" className="btn btn-outline-primary mx-2">Newsletter</a>
+                        <a href="/#" className="btn btn-outline-primary mx-2">Data</a>
                     </div>
                 </nav>
             </div>
