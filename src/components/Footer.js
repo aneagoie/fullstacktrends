@@ -12,7 +12,7 @@ class Header extends Component {
                     <div className="row">
 
                         <div className="col-md-5 px-4">
-                            <a className="navbar-brand pb-3" href="#"><img src={logo} alt="logo" height="50" /></a>
+                            <a className="navbar-brand pb-3" href="/#"><img src={logo} alt="logo" height="50" /></a>
                             <p className="text-muted text-justify">Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile, Programming Languages, Backend</p>
                             <div className="socials text-white pt-2">
                                 <i class="fab fa-medium"></i>
