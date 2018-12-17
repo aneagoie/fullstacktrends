@@ -1,1 +1,1 @@
-## Full Stack Trends [![Build Status](https://travis-ci.org/aneagoie/fullstacktrends.svg?branch=master)](https://travis-ci.org/aneagoie/fullstacktrends)
+## Full Stack Trends
