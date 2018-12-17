@@ -1,13 +1,14 @@
 {
-  "main.css": "/fullstacktrends/static/css/main.4582c14c.chunk.css",
-  "main.js": "/fullstacktrends/static/js/main.d64a08d2.chunk.js",
-  "main.js.map": "/fullstacktrends/static/js/main.d64a08d2.chunk.js.map",
-  "static/js/1.5b265051.chunk.js": "/fullstacktrends/static/js/1.5b265051.chunk.js",
-  "static/js/1.5b265051.chunk.js.map": "/fullstacktrends/static/js/1.5b265051.chunk.js.map",
+  "main.css": "/fullstacktrends/static/css/main.2f9f7818.chunk.css",
+  "main.js": "/fullstacktrends/static/js/main.c9d7b0b6.chunk.js",
+  "main.js.map": "/fullstacktrends/static/js/main.c9d7b0b6.chunk.js.map",
+  "static/js/1.a4ebaa50.chunk.js": "/fullstacktrends/static/js/1.a4ebaa50.chunk.js",
+  "static/js/1.a4ebaa50.chunk.js.map": "/fullstacktrends/static/js/1.a4ebaa50.chunk.js.map",
   "runtime~main.js": "/fullstacktrends/static/js/runtime~main.a6c566ba.js",
   "runtime~main.js.map": "/fullstacktrends/static/js/runtime~main.a6c566ba.js.map",
-  "static/css/main.4582c14c.chunk.css.map": "/fullstacktrends/static/css/main.4582c14c.chunk.css.map",
+  "static/media/footer.svg": "/fullstacktrends/static/media/footer.6a2a7d2b.svg",
+  "static/css/main.2f9f7818.chunk.css.map": "/fullstacktrends/static/css/main.2f9f7818.chunk.css.map",
   "index.html": "/fullstacktrends/index.html",
-  "precache-manifest.98fd27f1847e497c8a04cab1dbfd037e.js": "/fullstacktrends/precache-manifest.98fd27f1847e497c8a04cab1dbfd037e.js",
+  "precache-manifest.92bc40f21d5075b29465504bfb5c1c3a.js": "/fullstacktrends/precache-manifest.92bc40f21d5075b29465504bfb5c1c3a.js",
   "service-worker.js": "/fullstacktrends/service-worker.js"
 }
