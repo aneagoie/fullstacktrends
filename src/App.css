@@ -1,10 +1,19 @@
+:root {
+  --one: #e24e42; 
+  --two: #D9B310;
+  --three: #EB6E80;
+  --four: #008F95;
+  --five: #2B2A2A;
+}
+
 .btn-outline-primary{
-  color: #274d7c;
-  border-color: #274d7c;
-  padding: 8px 30px
+  color: var(--one);
+  border-color: var(--three);
+  padding: 8px 30px;
+  border-radius: 30px
 }
 
 .btn-outline-primary:hover{
-  background-color: #274d7c;
-  border-color: #274d7c;
+  background-color: var(--three);
+  border-color: var(--one);
 }

@@ -1,9 +1,33 @@
-.footLinks li a {
-    color: #274d7c;
+footer {
+    background: #00252e
 }
-.footLinks li a:hover {
-    color: #474747;
+
+footer .socials i {
+    padding: 10px 20px 0 0;
+    font-size: 40px
 }
-.footSocial i {
-    color: #274d7c;
+
+footer .socials i:hover {
+    color: var(--three)
 }
+
+.btn-outline-submit{
+    background-color: var(--three);
+    color: #fff;
+    border-color: var(--three);
+    padding: 8px 30px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+  .btn-outline-submit:hover{
+    background-color: var(--one);
+    border-color: var(--one);
+  }
+
+  .copyright {
+      color: var(--five);
+      background-color: var(--three);
+      text-align: center;
+      padding: 20px
+  }
+
