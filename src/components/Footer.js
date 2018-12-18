@@ -23,18 +23,16 @@ class Header extends Component {
                                 </div>
                             </div>
 
-                            <div className="col-md-7 px-5">
-                                <h2 className="text-white pt-2">Newsletter</h2>
-                                <p className="text-muted pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec lacinia risus. Proin placerat massa vestibulum, fringilla nunc a, blandit orci.</p>
-                                <div class="input-group  py-3 w-75 ml-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fas fa-envelope-open"></i></div>
-                                    </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" />
-                                    <button className="btn btn-outline-submit">Submit</button>
-                                </div>
+                            <div className="credits col-md-7 px-5 text-right">
+                                <h5 className="pt-2">Brought to you by</h5>
+                                <ul>
+                                    <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"><li>Zero To Mastery</li></a>
+                                    <a href="https://github.com/aneagoie"><li>Andrei Neagoie</li></a>
+                                    <a href="https://github.com/anantankur"><li>Ankur Anant</li></a>
+                                    <a href="https://github.com/Dhaval1403"><li>Dhaval 1403</li></a>
+                                    <a href="https://github.com/MattCSmith"><li>Matt Smith</li></a>
+                                </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
