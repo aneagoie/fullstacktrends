@@ -1,3 +1,4 @@
+/* Color Variables */
 :root {
   --one: #e24e42; 
   --two: #D9B310;
@@ -5,6 +6,9 @@
   --four: #008F95;
   --five: #2B2A2A;
 }
+
+/* Fonts and Imports */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 .btn-outline-primary{
   color: var(--one);

@@ -1,5 +1,10 @@
 footer {
-    background: #00252e
+    background-color: rgb(255, 255, 255);
+    background-image: url("../images/trianglify.svg");
+}
+
+.footer {
+    background: #00252e;
 }
 
 footer .socials i {
@@ -11,23 +16,35 @@ footer .socials i:hover {
     color: var(--three)
 }
 
-.btn-outline-submit{
-    background-color: var(--three);
-    color: #fff;
-    border-color: var(--three);
-    padding: 8px 30px;
-    border-radius: 0 20px 20px 0;
-  }
-  
-  .btn-outline-submit:hover{
-    background-color: var(--one);
-    border-color: var(--one);
-  }
+.credits h5 {
+    margin-top: 20px;
+    color: #8d8d8d;
+    font-family: 'Ubuntu', sans-serif;
+}
+.credits li {
+    list-style-type: none;
+    color: #fff
+}
+.credits li:hover {
+    color: var(--one);
+}
+.credits a {
+    text-decoration: none;
+}
 
-  .copyright {
-      color: var(--five);
-      background-color: var(--three);
-      text-align: center;
-      padding: 20px
-  }
+.copyright {
+    background-color: #000f13;
+    color: #8d8d8d;
+    text-align: center;
+    padding: 20px
+}
 
+.waveAlt {
+    position: relative;
+    top:-1px;
+    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+    -moz-transform: rotate(180deg);        /* FF */
+    -o-transform: rotate(180deg);          /* Opera */
+    -ms-transform: rotate(180deg);         /* IE9 */
+    transform: rotate(180deg);  
+}
