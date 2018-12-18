@@ -10,9 +10,6 @@
 /* Fonts and Imports */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-/* body {
-
-} */
 .btn-outline-primary{
   color: var(--one);
   border-color: var(--three);

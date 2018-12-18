@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Footer.css';
 import foot from '../images/footer.svg';
+import footAlt from '../images/footerAlt.svg'
 import logo from '../images/logo1alt.png';
 import Newsletter from '../components/Newsletter'
-
-class Header extends Component {
+class Footer extends Component {
     render() {
         return (
             <footer>
+                <img className="waveAlt" src={footAlt} alt="logo" style={{ width: "100%" }} />
                 <Newsletter />
                 <img className="wave" src={foot} alt="logo" style={{ width: "100%" }} />
                 <div className="footer py-5">
@@ -46,4 +47,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Footer;
