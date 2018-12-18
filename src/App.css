@@ -1,6 +1,6 @@
 /* Color Variables */
 :root {
-  --one: #e24e42; 
+  --one: #e24e42;
   --two: #D9B310;
   --three: #EB6E80;
   --four: #008F95;
@@ -20,4 +20,9 @@
 .btn-outline-primary:hover{
   background-color: var(--three);
   border-color: var(--one);
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
