@@ -1,0 +1,34 @@
+/* .newsletter h2 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--five);
+    font-size: 2em;
+}
+
+.newsletter .input-group {
+    width: 50%;
+    margin: auto;
+    padding: 30px 0 50px 0;
+} */
+
+.newsletter {
+    padding: 50px 0 100px 0;
+}
+
+.ml-form-embedWrapper{
+    max-width: 50%!important;
+    width: 50%!important;
+}
+#mlb2-1154434.ml-form-embedContainer .ml-form-embedWrapper {
+    background: transparent!important;
+}
+.ml-form-embedContent h4 {
+    font-family: 'Ubuntu', sans-serif!important;
+    color: var(--five)!important;
+    font-size: 2em!important;
+    text-align: center!important;
+}
+.ml-form-embedContent p {
+    color: rgb(107, 107, 107)!important;
+    text-align: center!important;
+    margin-bottom: 30px!important 
+}

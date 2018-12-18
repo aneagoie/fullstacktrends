@@ -1,5 +1,10 @@
 footer {
-    background: #00252e
+    background-color: rgb(255, 255, 255);
+    background-image: url("../images/trianglify.svg");
+}
+
+.footer {
+    background: #00252e;
 }
 
 footer .socials i {
@@ -11,23 +16,22 @@ footer .socials i:hover {
     color: var(--three)
 }
 
-.btn-outline-submit{
+.btn-outline-submit {
     background-color: var(--three);
     color: #fff;
     border-color: var(--three);
     padding: 8px 30px;
     border-radius: 0 20px 20px 0;
-  }
-  
-  .btn-outline-submit:hover{
+}
+
+.btn-outline-submit:hover {
     background-color: var(--one);
     border-color: var(--one);
-  }
+}
 
-  .copyright {
-      color: var(--five);
-      background-color: var(--three);
-      text-align: center;
-      padding: 20px
-  }
-
+.copyright {
+    color: var(--five);
+    background-color: var(--three);
+    text-align: center;
+    padding: 20px
+}
