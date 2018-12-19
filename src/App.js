@@ -53,7 +53,7 @@ class App extends Component {
                     </div>
                 </div>
                 <Newsletter />
-                <Data />
+                <Data cData={this.state.cData}/>
                 <Footer />
             </div>
         );
