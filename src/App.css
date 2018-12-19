@@ -1,10 +1,14 @@
+/* Color Variables */
 :root {
-  --one: #e24e42; 
+  --one: #e24e42;
   --two: #D9B310;
   --three: #EB6E80;
   --four: #008F95;
   --five: #2B2A2A;
 }
+
+/* Fonts and Imports */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 .btn-outline-primary{
   color: var(--one);
@@ -16,4 +20,9 @@
 .btn-outline-primary:hover{
   background-color: var(--three);
   border-color: var(--one);
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
