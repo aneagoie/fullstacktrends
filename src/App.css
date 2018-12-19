@@ -1,4 +1,5 @@
 /* Color Variables */
+
 :root {
   --one: #e24e42;
   --two: #D9B310;
@@ -8,8 +9,8 @@
 }
 
 /* Fonts and Imports */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 body {
   background-color: rgb(255, 255, 255);
   background-image: url("./images/parallax.svg");
@@ -19,7 +20,7 @@ body {
   background-size: cover;
 }
 
-.button-primary{
+.button-primary {
   color: var(--one);
   padding: 8px 30px;
   border-radius: 30px;
@@ -27,7 +28,7 @@ body {
   margin: 0 10px
 }
 
-.button-primary:hover{
+.button-primary:hover {
   background-color: var(--three);
   border-color: var(--three);
   color: white;
@@ -35,6 +36,20 @@ body {
 }
 
 .chart-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.svg-flip {
+  position: relative;
+  top: -1px;
+  -webkit-transform: rotate(180deg);
+  /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);
+  /* FF */
+  -o-transform: rotate(180deg);
+  /* Opera */
+  -ms-transform: rotate(180deg);
+  /* IE9 */
+  transform: rotate(180deg);
 }
