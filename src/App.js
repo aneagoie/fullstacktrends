@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Chart from './components/Chart';
 import Rank from './components/Rank';
 import Newsletter from './components/Newsletter'
+import Data from './components/Data'
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -52,6 +53,7 @@ class App extends Component {
                     </div>
                 </div>
                 <Newsletter />
+                <Data />
                 <Footer />
             </div>
         );
