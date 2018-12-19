@@ -19,16 +19,19 @@ body {
   background-size: cover;
 }
 
-.btn-outline-primary{
+.button-primary{
   color: var(--one);
-  border-color: var(--three);
   padding: 8px 30px;
-  border-radius: 30px
+  border-radius: 30px;
+  border: 1px solid var(--three);
+  margin: 0 10px
 }
 
-.btn-outline-primary:hover{
+.button-primary:hover{
   background-color: var(--three);
-  border-color: var(--one);
+  border-color: var(--three);
+  color: white;
+  text-decoration: none;
 }
 
 .chart-container {
