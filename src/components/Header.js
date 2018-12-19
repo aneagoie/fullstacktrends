@@ -13,6 +13,7 @@ class Header extends Component {
                         <a href="/#" className="btn btn-outline-primary mx-2">Data</a>
                     </div>
                 </nav>
+                <hr />
             </div>
         );
     }

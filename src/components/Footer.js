@@ -3,7 +3,7 @@ import './Footer.css';
 import foot from '../images/footer.svg';
 import logo from '../images/logo1alt.png';
 
-class Header extends Component {
+class Footer extends Component {
     render() {
         return (
             <footer>
@@ -45,4 +45,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Footer;
