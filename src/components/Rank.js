@@ -1,23 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
+import './Rank.css';
 
-class Rank extends Component {
 
-    constructor(props) {
-        super(props);
-        console.log(props.cData);
-    }
+    const Rank = ({langArray, onLangClick}) => {
 
-    render(){
+        function addLang(lang) {
+            let id = Math.random();
+            return <h4 key={lang+id} onClick={() => onLangClick(lang)} className="lang-links">{lang}</h4>
+        }
+
         return(
             <div>
-                <h4>Node</h4>
-                <h4>jQuery</h4>
-                <h4>SASS</h4>
-                <h4>Angular</h4>
-                <h4>React</h4>
+                {langArray.map(addLang)}
             </div>
         );
     }
-}
 
 export default Rank;

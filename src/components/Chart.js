@@ -1,30 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Polar} from 'react-chartjs-2';
 
-class Chart extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            cData: props.cData
-        }
-    };
-
-    render() {
+    const Chart = ({data}) => {    
         return(
-            <div className="chart">
-                <Polar
-                    data={this.state.cData}
-                    options={{
-                        maintainAspectRatio: true,
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }}
-                />
+            <div>
+                {data===undefined
+                    ?   <h2>Loading...</h2>
+                    :   <Polar
+                            data={data}
+                            options={{
+                                maintainAspectRatio: true,
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }}
+                        />
+                }
+
             </div>
         );
-    };
-}
+    }
+
 
 export default Chart;
