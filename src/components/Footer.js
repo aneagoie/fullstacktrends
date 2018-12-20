@@ -1,16 +1,12 @@
 import React from 'react';
 import './Footer.css';
-import foot from '../images/footer.svg';
-import footAlt from '../images/footerAlt.svg'
+import wave from '../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../images/logo1alt.png';
-import Newsletter from '../components/Newsletter'
 
 const Footer = () => {
     return (
         <footer>
-            <img className="waveAlt" src={footAlt} alt="logo" style={{ width: "100%" }} />
-            <Newsletter />
-            <img className="wave" src={foot} alt="logo" style={{ width: "100%" }} />
+            <img src={wave} alt="" style={{ width: "100%" }} />
             <div className="footer py-5">
                 <div className="container">
                     <div className="row">
@@ -40,7 +36,7 @@ const Footer = () => {
 
             <div className="copyright">
                 © 2018 FullStack Trends. All Rights Reserved
-                </div>
+            </div>
 
         </footer>
     )

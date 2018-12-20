@@ -1,4 +1,5 @@
 /* Color Variables */
+
 :root {
   --one: #e24e42;
   --two: #D9B310;
@@ -8,21 +9,47 @@
 }
 
 /* Fonts and Imports */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-.btn-outline-primary{
-  color: var(--one);
-  border-color: var(--three);
-  padding: 8px 30px;
-  border-radius: 30px
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+body {
+  background-color: rgb(255, 255, 255);
+  background-image: url("./images/parallax.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.btn-outline-primary:hover{
+.button-primary {
+  color: var(--one);
+  padding: 8px 30px;
+  border-radius: 30px;
+  border: 1px solid var(--three);
+  margin: 0 10px
+}
+
+.button-primary:hover {
   background-color: var(--three);
-  border-color: var(--one);
+  border-color: var(--three);
+  color: white;
+  text-decoration: none;
 }
 
 .chart-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.svg-flip {
+  position: relative;
+  top: -1px;
+  -webkit-transform: rotate(180deg);
+  /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);
+  /* FF */
+  -o-transform: rotate(180deg);
+  /* Opera */
+  -ms-transform: rotate(180deg);
+  /* IE9 */
+  transform: rotate(180deg);
 }
