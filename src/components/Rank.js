@@ -8,8 +8,6 @@ import './Rank.css';
             let id = Math.random();
             return <h4 key={lang+id} onClick={() => onLangClick(lang)} className="lang-links">{lang}</h4>
         }
-        
-        console.log(langArray)
 
         return(
             <div>

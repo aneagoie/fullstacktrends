@@ -1,8 +1,7 @@
 import React from 'react';
 import {Polar} from 'react-chartjs-2';
 
-    const Chart = ({data}) => {
-        console.log({data});        
+    const Chart = ({data}) => {    
         return(
             <div>
                 {data===undefined
@@ -17,7 +16,7 @@ import {Polar} from 'react-chartjs-2';
                             }}
                         />
                 }
-                
+
             </div>
         );
     }
