@@ -8,8 +8,36 @@ import Data from './components/Data'
 import Footer from './components/Footer';
 import chartData from './data.json';
 
-class App extends Component {
+const dataExtractor = () => {
 
+    let lArray = [];
+    let dlArray = [];
+    let gArray = [];
+    let usArray = [];
+    let supArray = [];
+    let remArray = [];
+
+    for (let i = 0; i < chartData[0].length; i++) {
+        lArray.push(chartData[0][i].name);
+        dlArray.push(chartData[0][i].devLove);
+        gArray.push(chartData[0][i].gJobDemand);
+        usArray.push(chartData[0][i].usJobDemand);
+        supArray.push(chartData[0][i].supJobDemand);
+        remArray.push(chartData[0][i].remJobDemand);
+
+    }
+
+    return ({
+        langArray: lArray,
+        devLoveArray: dlArray,
+        gJobArray: gArray,
+        usJobArray: usArray,
+        supJobArray: supArray,
+        remJobArray: remArray,
+    })
+}
+
+class App extends Component {
     constructor() {
         super();
         this.state = {
@@ -23,63 +51,20 @@ class App extends Component {
                 Backend-----------------> 3
             */
             currentCatIndex: 0,
-            arrObj: {
-                langArray: [],
-                devLoveArray: [],
-                gJobArray: [],
-                usJobArray: [],
-                supJobArray: [],
-                remJobArray: []
-            }
+            arrObj: dataExtractor()
         }
-
-        this.onLangClick = this.onLangClick.bind(this);
     }
 
     componentDidMount() {
-        this.dataExtractor();
-        // this.getData();
+        this.getData(this.state.currentLang);
     }
 
-    dataExtractor() {
-
-    	let lArray = [];
-    	let dlArray = [];
-    	let gArray = [];
-        let usArray = [];
-        let supArray = [];
-        let remArray = [];
-
-        for (let i = 0; i < chartData[0].length; i++) {
-            lArray.push(chartData[0][i].name);
-            dlArray.push(chartData[0][i].devLove);
-            gArray.push(chartData[0][i].gJobDemand);
-            usArray.push(chartData[0][i].usJobDemand);
-            supArray.push(chartData[0][i].supJobDemand);
-            remArray.push(chartData[0][i].remJobDemand);
-
-        }
-
-        this.setState({
-            arrObj: {
-                langArray: lArray,
-                devLoveArray: dlArray,
-                gJobArray: gArray,
-                usJobArray: usArray,
-                supJobArray: supArray,
-                remJobArray: remArray,
-            }
-        }, () => {
-            this.getData();
-        });
-    }
-
-    getData() {
-        const {currentLang} = this.state;
+    getData(currentSelection) {
         const {langArray, devLoveArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.arrObj;
-        const cIndex = langArray.indexOf(currentLang);
+        const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
+            currentLang: currentSelection,
             cData: {
                 datasets: [
                     {
@@ -99,12 +84,8 @@ class App extends Component {
         });
     }
 
-    onLangClick(lang) {
-        this.setState({
-            currentLang: lang
-        }, () => {
-            this.getData();
-        });
+    onLangClick = (lang) => {
+        this.getData(lang);
     }
 
     render() {
@@ -121,7 +102,7 @@ class App extends Component {
                     </div>
                 </div>
                 <Newsletter />
-                <Data />
+                <Data chartData={cData} />
                 <Footer />
             </div>
         );

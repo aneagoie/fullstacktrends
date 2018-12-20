@@ -13,7 +13,7 @@ import logo9 from "../images/company/simplyhired.png";
 import logo10 from "../images/company/stackoverflow.png";
 import logo11 from "../images/company/stateofjs.png";
 
-const DataSource = ({ cData }) => {
+const DataSource = ({ chartData }) => {
     return (
       <div className="wrapper-data">
         <div className="container-grid">
@@ -32,7 +32,7 @@ const DataSource = ({ cData }) => {
         </div>
         <div className="arrow"><span>&#8674;</span></div>
         <div className="arrow2"><span>&#8675;</span></div>
-        <Chart cData={cData}/>
+        <Chart data={chartData}/>
       </div>
     )
 }
