@@ -52,4 +52,5 @@ body {
   -ms-transform: rotate(180deg);
   /* IE9 */
   transform: rotate(180deg);
+  z-index: -1;
 }
