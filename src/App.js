@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Content from './components/Content';
 import Chart from './components/Chart';
 import Rank from './components/Rank';
 import Newsletter from './components/Newsletter'
@@ -47,8 +45,6 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Navigation />
-                <Content />
                 <div className="p-5 m-5 text-center">
                     <h1 className="mb-5">Top 5</h1>
                     <div className="chart-container">
