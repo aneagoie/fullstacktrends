@@ -1,5 +1,6 @@
 import React from 'react';
 import {Polar} from 'react-chartjs-2';
+import './Chart.css';
 
     const Chart = ({data}) => {    
         return(

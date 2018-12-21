@@ -46,6 +46,11 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
+h2 {
+  color: var(--one);
+  text-decoration: underline;
+}
+
 .svg-flip {
   position: relative;
   top: -1px;
