@@ -9,7 +9,10 @@ import Data from './components/Data';
 import Footer from './components/Footer';
 import chartData from './data.json';
 
-const dataExtractor = () => {
+//update variable below according to tabs
+let currentCatIndexGlobal = 0;
+
+const dataExtractor = (catIndex) => {
 
     let lArray = [];
     let dlArray = [];
@@ -18,13 +21,13 @@ const dataExtractor = () => {
     let supArray = [];
     let remArray = [];
 
-    for (let i = 0; i < chartData[0].length; i++) {
-        lArray.push(chartData[0][i].name);
-        dlArray.push(chartData[0][i].devLove);
-        gArray.push(chartData[0][i].gJobDemand);
-        usArray.push(chartData[0][i].usJobDemand);
-        supArray.push(chartData[0][i].supJobDemand);
-        remArray.push(chartData[0][i].remJobDemand);
+    for (let i = 0; i < chartData[catIndex].length; i++) {
+        lArray.push(chartData[catIndex][i].name);
+        dlArray.push(chartData[catIndex][i].devLove);
+        gArray.push(chartData[catIndex][i].gJobDemand);
+        usArray.push(chartData[catIndex][i].usJobDemand);
+        supArray.push(chartData[catIndex][i].supJobDemand);
+        remArray.push(chartData[catIndex][i].remJobDemand);
 
     }
 
@@ -43,7 +46,7 @@ class App extends Component {
         super();
         this.state = {
             cData: {},
-            currentLang: chartData[0][0].name,
+            currentLang: chartData[currentCatIndexGlobal][0].name,
             /*
             currentCatIndex :-
                 Web---------------------> 0
@@ -52,7 +55,7 @@ class App extends Component {
                 Backend-----------------> 3
             */
             currentCatIndex: 0,
-            arrObj: dataExtractor()
+            arrObj: dataExtractor(currentCatIndexGlobal)
         }
     }
 
