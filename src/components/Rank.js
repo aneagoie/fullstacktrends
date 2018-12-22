@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Rank.css';
 
 class Rank extends Component {
 
@@ -9,12 +10,12 @@ class Rank extends Component {
 
     render(){
         return(
-            <div>
-                <h4>Node</h4>
-                <h4>jQuery</h4>
-                <h4>SASS</h4>
-                <h4>Angular</h4>
-                <h4>React</h4>
+            <div class="rank">
+                <a href='/#'><h5>NODE JS</h5></a>
+                <a href='/#'><h5>jQUERY</h5></a>
+                <a href='/#'><h5>SASS</h5></a>
+                <a href='/#'><h5>ANGULAR</h5></a>
+                <a href='/#'><h5>REACT</h5></a>
             </div>
         );
     }

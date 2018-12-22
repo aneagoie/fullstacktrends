@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Navigation from './components/Navigation';
 import Chart from './components/Chart';
 import Rank from './components/Rank';
-import Newsletter from './components/Newsletter'
-import Data from './components/Data'
+import Newsletter from './components/Newsletter';
+import Data from './components/Data';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -45,13 +46,16 @@ class App extends Component {
         return (
             <div>
                 <Header />
+                <Navigation />
+
                 <div className="p-5 m-5 text-center">
-                    <h1 className="mb-5">Top 5</h1>
+                    <h2 className="mb-5">Top 5 Languages Of Web</h2>
                     <div className="chart-container">
                         <Rank cData={this.state.cData} />
                         <Chart cData={this.state.cData} />
                     </div>
                 </div>
+
                 <Newsletter />
                 <Data />
                 <Footer />
