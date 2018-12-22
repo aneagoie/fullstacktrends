@@ -24,8 +24,14 @@ body {
   color: var(--one);
   padding: 8px 30px;
   border-radius: 30px;
-  border: 1px solid var(--one);
-  margin: 0 10px
+  border: 1px solid var(--three);
+  margin: 0 10px;
+  margin: 0 10px;
+  background: transparent;
+}
+
+.button-primary:focus {
+  outline: 0;
 }
 
 .button-primary:hover {
@@ -57,4 +63,5 @@ h2 {
   -ms-transform: rotate(180deg);
   /* IE9 */
   transform: rotate(180deg);
+  z-index: -1;
 }

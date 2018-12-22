@@ -14,9 +14,9 @@ const Footer = () => {
                             <a className="navbar-brand pb-3" href="/#"><img src={logo} alt="logo" height="50" /></a>
                             <p className="text-muted text-justify">Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile, Programming Languages, Backend</p>
                             <div className="socials text-white pt-2">
-                                <i class="fab fa-medium"></i>
-                                <i class="fab fa-twitter-square"></i>
-                                <i class="fab fa-github-square"></i>
+                                <i className="fab fa-medium"></i>
+                                <i className="fab fa-twitter-square"></i>
+                                <i className="fab fa-github-square"></i>
                             </div>
                         </div>
 
