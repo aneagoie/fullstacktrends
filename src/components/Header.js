@@ -11,8 +11,6 @@ const Header = () => {
             <div className="nav-buttons">
                 <Link to="newsletter" className="button-primary" spy={true} activeClass="active" smooth={true} duration={800} offset={1}>Newsletter</Link>
                 <Link to="data" className="button-primary" spy={true} activeClass="active" smooth={true} duration={800} offset={1}>Data</Link>
-
-              
             </div>
         </section>
     )

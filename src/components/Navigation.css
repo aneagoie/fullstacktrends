@@ -3,11 +3,3 @@
     justify-content: center;
     margin-top: 125px;
 }
-
-#header a {
-    color: var(--three)
-}
-
-#header .active {
-    color: #fff
-}
