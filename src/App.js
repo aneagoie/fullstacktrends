@@ -61,12 +61,11 @@ class App extends Component {
         this.getData(this.state.currentLang);
     }
 
-    getData(currentSelection, object) {
-        const {langArray, devLoveArray, gJobArray, usJobArray, supJobArray, remJobArray} = object;
+    getData(currentSelection) {
+        const {langArray, devLoveArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.arrObj;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
-            arrObj: object,
             currentLang: currentSelection,
             cData: {
                 datasets: [
@@ -93,8 +92,11 @@ class App extends Component {
 
     onNavClick = (index) => {
         currentCatIndexGlobal = index;
-        let obj = dataExtractor(index);
-        this.getData(obj.langArray[0], obj);
+        this.setState({
+            arrObj: dataExtractor(index)
+        })
+
+        this.getData(this.state.arrObj.langArray[0]);
     }
 
     render() {

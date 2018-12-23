@@ -23,8 +23,8 @@ body {
 .button-primary {
   color: var(--one);
   padding: 8px 30px;
-  border-radius: 30px;
-  border: 1px solid var(--three);
+  border-radius: 15px;
+  border: 1px solid var(--one);
   margin: 0 10px;
   margin: 0 10px;
   background: transparent;
