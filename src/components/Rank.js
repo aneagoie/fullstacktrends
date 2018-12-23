@@ -12,9 +12,9 @@ const Rank = ({ langArray, onLangClick, checkbox }) => {
     function addLang(lang) {
         let id = Math.random();
         return (
-            <div  key={lang + id} class="pretty p-default p-smooth p-bigger">
+            <div  key={lang + id} className="pretty p-default p-smooth p-bigger">
                 <input type="checkbox" defaultChecked={isChecked(lang)} onChange={() => onLangClick(lang)} />
-                <div class="state p-warning">
+                <div className="state p-warning">
                     <label>{lang}</label>
                 </div>
 

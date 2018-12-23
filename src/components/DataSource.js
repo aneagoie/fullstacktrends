@@ -13,7 +13,7 @@ const DataSource = ({ chartData }) => {
           sources.map((c, i) => {
             return (
               <div key={i} className="zone purple tooltip1 text-center">
-                <div class="top">
+                <div className="top">
                   <h5>{c}</h5>
                   <i></i>
                 </div>
@@ -23,7 +23,7 @@ const DataSource = ({ chartData }) => {
           })
         }
         <div className="zone purple tooltip1 text-center">
-          <div class="top">
+          <div className="top">
             <h5>Other</h5>
             <i></i>
           </div>
