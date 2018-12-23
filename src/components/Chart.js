@@ -2,7 +2,7 @@ import React from 'react';
 import {Polar} from 'react-chartjs-2';
 import './Chart.css';
 
-    const Chart = ({data, legend}) => { 
+    const Chart = ({data, legend}) => {
 
         return(
             <div>
