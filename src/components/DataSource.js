@@ -10,9 +10,9 @@ const DataSource = ({ chartData }) => {
     <div className="wrapper-data">
       <div className="container-grid">
         {
-          sources.map((c) => {
+          sources.map((c, i) => {
             return (
-              <div className="zone purple tooltip1 text-center">
+              <div key={i} className="zone purple tooltip1 text-center">
                 <div class="top">
                   <h5>{c}</h5>
                   <i></i>
