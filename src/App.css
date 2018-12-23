@@ -32,7 +32,7 @@ body {
   border: 1px solid var(--one);
   margin: 0 10px;
   background: transparent;
-  cursor:pointer!important;
+  cursor: pointer !important;
 }
 
 .button-primary:focus {
@@ -55,6 +55,7 @@ body {
   border: 1px solid #fff;
   border-radius: 30px
 }
+
 .chart-container {
   position: relative; 
   height:90%;
