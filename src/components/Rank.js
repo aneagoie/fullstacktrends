@@ -10,7 +10,7 @@ import './Rank.css';
         }
 
         return(
-            <div>
+            <div className="rank">
                 {langArray.map(addLang)}
             </div>
         );
