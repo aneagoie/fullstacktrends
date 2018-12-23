@@ -95,7 +95,7 @@ class App extends Component {
     render() {
         const {cData, arrObj} = this.state;
         return (
-            <div>
+            <div id="top">
                 <Header />
                 <Navigation />
 
@@ -107,7 +107,7 @@ class App extends Component {
 
                     </div>
                 </div>
-
+                
                 <Newsletter />
                 <Data chartData={cData} location={false} />
                 <Footer />
