@@ -9,6 +9,7 @@ import Data from './components/Data';
 import Footer from './components/Footer';
 import chartData from './data.json';
 
+//update variable below according to tabs
 let currentCatIndexGlobal = 0;
 
 const dataExtractor = (catIndex) => {
@@ -53,7 +54,8 @@ class App extends Component {
                 Programming Language----> 2
                 Backend-----------------> 3
             */
-            arrObj: dataExtractor(0)
+            currentCatIndex: 0,
+            arrObj: dataExtractor(currentCatIndexGlobal)
         }
     }
 
