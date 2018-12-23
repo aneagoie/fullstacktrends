@@ -4,6 +4,14 @@ self.__precacheManifest = [
     "url": "/fullstacktrends/static/media/parallax.4cbbd78c.svg"
   },
   {
+    "revision": "ebb669c47397a5a058fcb49bd4c09f0b",
+    "url": "/fullstacktrends/static/media/logo1alt.ebb669c4.psd"
+  },
+  {
+    "revision": "b740f4640d2e2c904757d0ffaa378b84",
+    "url": "/fullstacktrends/static/media/logo.b740f464.psd"
+  },
+  {
     "revision": "3f23df8c64386f23ada57e5c0c5d4b5f",
     "url": "/fullstacktrends/static/media/bg-whitewave-desktop.3f23df8c.svg"
   },
@@ -16,19 +24,19 @@ self.__precacheManifest = [
     "url": "/fullstacktrends/static/js/runtime~main.a6c566ba.js"
   },
   {
-    "revision": "5b03dd7a2c468b236225",
-    "url": "/fullstacktrends/static/js/main.5b03dd7a.chunk.js"
+    "revision": "cd98283ffa799c820c4d",
+    "url": "/fullstacktrends/static/js/main.cd98283f.chunk.js"
   },
   {
-    "revision": "ed4ecba0c8fc94ec0b68",
-    "url": "/fullstacktrends/static/js/1.ed4ecba0.chunk.js"
+    "revision": "92e34816c213396c1bcd",
+    "url": "/fullstacktrends/static/js/1.92e34816.chunk.js"
   },
   {
-    "revision": "5b03dd7a2c468b236225",
-    "url": "/fullstacktrends/static/css/main.007ff03b.chunk.css"
+    "revision": "cd98283ffa799c820c4d",
+    "url": "/fullstacktrends/static/css/main.7a38638f.chunk.css"
   },
   {
-    "revision": "42a13e8a80c55398547fe56304bfd60f",
+    "revision": "f170deec65247d7e7d8a151be39901ba",
     "url": "/fullstacktrends/index.html"
   }
 ];
