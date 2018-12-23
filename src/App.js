@@ -55,7 +55,8 @@ class App extends Component {
                 Backend-----------------> 3
             */
             currentCatIndex: 0,
-            arrObj: dataExtractor(currentCatIndexGlobal)
+            arrObj: dataExtractor(currentCatIndexGlobal),
+            checkbox: "React"
         }
     }
 
@@ -89,6 +90,7 @@ class App extends Component {
     }
 
     onLangClick = (lang) => {
+        this.setState({ checkbox: lang });
         this.getData(lang);
     }
 
@@ -99,14 +101,13 @@ class App extends Component {
                 <Header />
                 <Navigation />
 
-                <div className="p-5 m-5 text-center">
-                    <h2 className="mb-5">Top 5 Languages Of Web</h2>
+                <section id="trends">
+                    <h2 className="title">Top 5 Languages Of Web</h2>
                     <div className="chart-container">
-                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} />
+                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={this.state.checkbox} />
                         <Chart data={cData} />
-
                     </div>
-                </div>
+                </section>
 
                 <Newsletter />
                 <Data chartData={cData} />
