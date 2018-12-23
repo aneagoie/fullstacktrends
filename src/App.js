@@ -9,7 +9,9 @@ import Data from './components/Data';
 import Footer from './components/Footer';
 import chartData from './data.json';
 
-const dataExtractor = () => {
+let currentCatIndexGlobal = 0;
+
+const dataExtractor = (catIndex) => {
 
     let lArray = [];
     let dlArray = [];
@@ -18,13 +20,13 @@ const dataExtractor = () => {
     let supArray = [];
     let remArray = [];
 
-    for (let i = 0; i < chartData[0].length; i++) {
-        lArray.push(chartData[0][i].name);
-        dlArray.push(chartData[0][i].devLove);
-        gArray.push(chartData[0][i].gJobDemand);
-        usArray.push(chartData[0][i].usJobDemand);
-        supArray.push(chartData[0][i].supJobDemand);
-        remArray.push(chartData[0][i].remJobDemand);
+    for (let i = 0; i < chartData[catIndex].length; i++) {
+        lArray.push(chartData[catIndex][i].name);
+        dlArray.push(chartData[catIndex][i].devLove);
+        gArray.push(chartData[catIndex][i].gJobDemand);
+        usArray.push(chartData[catIndex][i].usJobDemand);
+        supArray.push(chartData[catIndex][i].supJobDemand);
+        remArray.push(chartData[catIndex][i].remJobDemand);
 
     }
 
@@ -43,7 +45,7 @@ class App extends Component {
         super();
         this.state = {
             cData: {},
-            currentLang: chartData[0][0].name,
+            currentLang: chartData[currentCatIndexGlobal][0].name,
             /*
             currentCatIndex :-
                 Web---------------------> 0
@@ -51,8 +53,7 @@ class App extends Component {
                 Programming Language----> 2
                 Backend-----------------> 3
             */
-            currentCatIndex: 0,
-            arrObj: dataExtractor()
+            arrObj: dataExtractor(0)
         }
     }
 
@@ -60,11 +61,12 @@ class App extends Component {
         this.getData(this.state.currentLang);
     }
 
-    getData(currentSelection) {
-        const {langArray, devLoveArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.arrObj;
+    getData(currentSelection, object) {
+        const {langArray, devLoveArray, gJobArray, usJobArray, supJobArray, remJobArray} = object;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
+            arrObj: object,
             currentLang: currentSelection,
             cData: {
                 datasets: [
@@ -89,19 +91,24 @@ class App extends Component {
         this.getData(lang);
     }
 
+    onNavClick = (index) => {
+        currentCatIndexGlobal = index;
+        let obj = dataExtractor(index);
+        this.getData(obj.langArray[0], obj);
+    }
+
     render() {
         const {cData, arrObj} = this.state;
         return (
             <div>
                 <Header />
-                <Navigation />
+                <Navigation onNavClick={this.onNavClick} />
 
                 <div className="p-5 m-5 text-center">
-                    <h2 className="mb-5">Top 5 Languages Of Web</h2>
+                    <h2 className="mb-5">Top 5</h2>
                     <div className="chart-container">
                         <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} />
                         <Chart data={cData} />
-
                     </div>
                 </div>
 
