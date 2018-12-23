@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/fullstacktrends/static/js/runtime~main.a6c566ba.js"
   },
   {
-    "revision": "cd98283ffa799c820c4d",
-    "url": "/fullstacktrends/static/js/main.cd98283f.chunk.js"
+    "revision": "c5380d64e8c7421ab1d4",
+    "url": "/fullstacktrends/static/js/main.c5380d64.chunk.js"
   },
   {
     "revision": "92e34816c213396c1bcd",
     "url": "/fullstacktrends/static/js/1.92e34816.chunk.js"
   },
   {
-    "revision": "cd98283ffa799c820c4d",
-    "url": "/fullstacktrends/static/css/main.7a38638f.chunk.css"
+    "revision": "c5380d64e8c7421ab1d4",
+    "url": "/fullstacktrends/static/css/main.d02acade.chunk.css"
   },
   {
-    "revision": "f170deec65247d7e7d8a151be39901ba",
+    "revision": "74c4bff470ce0afdbe0fd325941b83bd",
     "url": "/fullstacktrends/index.html"
   }
 ];
