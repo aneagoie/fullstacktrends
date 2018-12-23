@@ -17,7 +17,7 @@ const DataSource = ({ chartData }) => {
                   <h5>{c}</h5>
                   <i></i>
                 </div>
-                <img src={images(`./company/${c}.png`)} width="150px" height="150px" />
+                <img src={images(`./company/${c}.png`)} alt={c + " logo"} width="150px" height="150px" />
               </div>
             );
           })
