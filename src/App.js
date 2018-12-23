@@ -56,7 +56,6 @@ class App extends Component {
             */
             currentCatIndex: 0,
             arrObj: dataExtractor(currentCatIndexGlobal),
-            checkbox: "React"
         }
     }
 
@@ -84,13 +83,12 @@ class App extends Component {
                         ]
                     }
                 ],
-                labels: ['Developer Love', 'Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
+                labels: ['Developer Love', 'Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']                
             }
         });
     }
 
     onLangClick = (lang) => {
-        this.setState({ checkbox: lang });
         this.getData(lang);
     }
 
@@ -99,7 +97,6 @@ class App extends Component {
         this.setState({
             arrObj: dataExtractor(index)
         })
-        this.setState({checkbox: this.state.arrObj.langArray[0]})
         this.getData(this.state.arrObj.langArray[0]);
     }
 
@@ -113,7 +110,7 @@ class App extends Component {
                 <section id="trends">
                     <h2 className="title">Top 5 Languages Of Web</h2>
                     <div className="chart-container">
-                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={arrObj.langArray[0]} />
+                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} />
                         <Chart data={cData} />
                     </div>
                 </section>

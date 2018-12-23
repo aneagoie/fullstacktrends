@@ -4,16 +4,11 @@ import './Rank.css';
 
 const Rank = ({ langArray, onLangClick, checkbox }) => {
 
-    const isChecked = (lang) => {
-        if (lang === checkbox) return true
-        else return false
-    }
-
     function addLang(lang) {
         let id = Math.random();
         return (
             <div  key={lang + id} className="pretty p-default p-smooth p-bigger">
-                <input type="checkbox" defaultChecked={isChecked(lang)} onChange={() => onLangClick(lang)} />
+                <input type="checkbox" defaultChecked={(lang === langArray[0])} onChange={() => onLangClick(lang)} />
                 <div className="state p-warning">
                     <label>{lang}</label>
                 </div>
