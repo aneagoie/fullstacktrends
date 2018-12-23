@@ -16,7 +16,9 @@
 
 .zone > img {
   width: 60px;
+  height: auto;
   margin-bottom: 180px;
+  align-content: center
 }
 
 .more {
@@ -67,4 +69,55 @@ div > span {
     background: -o-linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* IE10+ */
     background: linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* W3C */
+}
+
+.tooltip1 {
+    display:inline-block;
+    position:relative;
+    text-align:left;
+}
+
+.tooltip1 .top {
+    min-width:200px; 
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -100%);
+    padding:10px 0 5px 0;
+    color:var(--three);
+    background-color:rgba(255, 255, 255, 0.95);
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+    border: 1px solid var(--three);
+    text-transform: uppercase
+}
+
+.tooltip1:hover .top {
+    display:block;
+}
+
+.tooltip1 .top i {
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-12px;
+    width:24px;
+    height:12px;
+    overflow:hidden;
+}
+
+.tooltip1 .top i::after {
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background-color:var(--three);
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }

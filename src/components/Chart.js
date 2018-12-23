@@ -2,7 +2,8 @@ import React from 'react';
 import {Polar} from 'react-chartjs-2';
 import './Chart.css';
 
-    const Chart = ({data}) => {    
+    const Chart = ({data, legend}) => { 
+
         return(
             <div>
                 {data===undefined
@@ -12,7 +13,7 @@ import './Chart.css';
                             options={{
                                 maintainAspectRatio: true,
                                 legend: {
-                                    position: 'bottom'
+                                    position: legend
                                 }
                             }}
                         />
