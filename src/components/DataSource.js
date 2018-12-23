@@ -1,9 +1,9 @@
 import React from 'react';
-import Chart from './Chart'
+import SourceChart from './SourceChart';
 import './DataSource.css';
 const images = require.context('../images', true);
 
-const sources = ["anglelist", "dice", "github", "hackernews", "hired", "indeed", "linkedin", "remoteco", "simplyhired", "stackoverflow", "stateofjs"]
+const sources = ["angellist", "dice", "github", "hackernews", "hired", "indeed", "linkedin", "remoteco", "simplyhired", "stackoverflow", "stateofjs"]
 
 const DataSource = ({ chartData }) => {
   return (
@@ -33,7 +33,9 @@ const DataSource = ({ chartData }) => {
       </div>
       <div className="arrow"><span>&#8674;</span></div>
       <div className="arrow2"><span>&#8675;</span></div>
-      <Chart data={chartData} demo={true} />
+      <div className="source-chart">
+        <SourceChart data={chartData} demo={true} />
+      </div>
     </div>
   );
 }
