@@ -10,20 +10,20 @@ const DataSource = ({ chartData }) => {
     <div className="wrapper-data">
       <div className="container-grid">
         {
-          sources.map((c) => {
+          sources.map((c, i) => {
             return (
-              <div className="zone purple tooltip1 text-center">
-                <div class="top">
+              <div key={i} className="zone purple tooltip1 text-center">
+                <div className="top">
                   <h5>{c}</h5>
                   <i></i>
                 </div>
-                <img src={images(`./company/${c}.png`)} width="150px" height="150px" />
+                <img src={images(`./company/${c}.png`)} alt={c + " logo"} width="150px" height="150px" />
               </div>
             );
           })
         }
         <div className="zone purple tooltip1 text-center">
-          <div class="top">
+          <div className="top">
             <h5>Other</h5>
             <i></i>
           </div>
