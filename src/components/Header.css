@@ -10,3 +10,19 @@
     margin-left: auto;
     padding: 15px;
 }
+
+#header a {
+    color: var(--three)
+}
+
+#header .active {
+    color: #fff
+}
+
+#header a:hover {
+    color: #fff
+}
+
+.scroll {
+    background: rgba(255, 255, 255, 0.883)
+}

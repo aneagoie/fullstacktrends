@@ -104,7 +104,7 @@ class App extends Component {
     render() {
         const {cData, arrObj} = this.state;
         return (
-            <div>
+            <div id="top">
                 <Header />
                 <Navigation onNavClick={this.onNavClick} />
 
@@ -112,12 +112,14 @@ class App extends Component {
                     <h2 className="mb-5">Top 5</h2>
                     <div className="chart-container">
                         <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} />
-                        <Chart data={cData} />
+
+                        <Chart data={cData} legend={"bottom"} />
+
                     </div>
                 </div>
-
+                
                 <Newsletter />
-                <Data chartData={cData} />
+                <Data chartData={cData} location={false} />
                 <Footer />
             </div>
         );
