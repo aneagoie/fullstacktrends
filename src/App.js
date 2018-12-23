@@ -54,7 +54,6 @@ class App extends Component {
                 Programming Language----> 2
                 Backend-----------------> 3
             */
-            currentCatIndex: 0,
             arrObj: dataExtractor(currentCatIndexGlobal),
         }
     }
@@ -64,7 +63,7 @@ class App extends Component {
     }
 
     getData(currentSelection) {
-        const {langArray, devLoveArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.arrObj;
+        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.arrObj;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
@@ -72,7 +71,7 @@ class App extends Component {
             cData: {
                 datasets: [
                     {
-                        data: [devLoveArray[cIndex], gJobArray[cIndex], usJobArray[cIndex], supJobArray[cIndex], remJobArray[cIndex]],
+                        data: [gJobArray[cIndex], usJobArray[cIndex], supJobArray[cIndex], remJobArray[cIndex]],
                         label: 'Languages',
                         backgroundColor: [
                             'rgba(255,99,132,0.7)',
@@ -83,7 +82,7 @@ class App extends Component {
                         ]
                     }
                 ],
-                labels: ['Developer Love', 'Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']                
+                labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
             }
         });
     }
@@ -101,7 +100,7 @@ class App extends Component {
     }
 
     render() {
-        const {cData, arrObj} = this.state;
+        const {cData, arrObj, currentLang} = this.state;
         return (
             <div id="top">
                 <Header />
@@ -111,6 +110,7 @@ class App extends Component {
                     <h2 className="title">Top 5 Languages Of Web</h2>
                     <div className="chart-container">
                         <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} />
+                        <h5 className="mb-4">Love by Community: {arrObj.devLoveArray[arrObj.langArray.indexOf(currentLang)] / 20} / 5</h5>
                         <Chart data={cData} />
                     </div>
                 </section>
