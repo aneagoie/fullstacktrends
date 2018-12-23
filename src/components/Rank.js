@@ -5,7 +5,6 @@ import './Rank.css';
 const Rank = ({ langArray, onLangClick, checkbox }) => {
 
     const isChecked = (lang) => {
-        console.log(lang, checkbox)
         if (lang === checkbox) return true
         else return false
     }
