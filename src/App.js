@@ -94,12 +94,21 @@ class App extends Component {
         this.getData(lang);
     }
 
+    onNavClick = (index) => {
+        currentCatIndexGlobal = index;
+        this.setState({
+            arrObj: dataExtractor(index)
+        })
+
+        this.getData(this.state.arrObj.langArray[0]);
+    }
+
     render() {
         const {cData, arrObj} = this.state;
         return (
-            <div>
+            <div id="top">
                 <Header />
-                <Navigation />
+                <Navigation onNavClick={this.onNavClick} />
 
                 <section id="trends">
                     <h2 className="title">Top 5 Languages Of Web</h2>
@@ -110,7 +119,7 @@ class App extends Component {
                 </section>
 
                 <Newsletter />
-                <Data chartData={cData} />
+                <Data chartData={cData} location={false} />
                 <Footer />
             </div>
         );

@@ -18,6 +18,7 @@ const Rank = ({ langArray, onLangClick, checkbox }) => {
                 <div class="state p-warning">
                     <label>{lang}</label>
                 </div>
+
             </div>
         )
     }
