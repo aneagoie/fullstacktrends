@@ -99,7 +99,7 @@ class App extends Component {
         this.setState({
             arrObj: dataExtractor(index)
         })
-
+        this.setState({checkbox: this.state.arrObj.langArray[0]})
         this.getData(this.state.arrObj.langArray[0]);
     }
 
@@ -108,12 +108,12 @@ class App extends Component {
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick} />
+                <Navigation onNavClick={this.onNavClick}/>
 
                 <section id="trends">
                     <h2 className="title">Top 5 Languages Of Web</h2>
                     <div className="chart-container">
-                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={this.state.checkbox} />
+                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={arrObj.langArray[0]} />
                         <Chart data={cData} />
                     </div>
                 </section>
