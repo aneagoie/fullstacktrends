@@ -5,7 +5,7 @@ const Navigation = ({ onNavClick }) => {
 
     return (
         <div className="container">
-            <div className="row center">
+            <div className="row center text-center">
 
                 <div className="d-inline-block">
                 <button className="button-primary" onClick={() => onNavClick(0)} ><i class="fas fa-globe"></i><span class="d-none d-sm-block">Web</span></button>
