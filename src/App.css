@@ -19,7 +19,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.collapse.show {
+  background: #fff
+}
 .title {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 25px;
@@ -46,7 +48,7 @@ body {
   text-decoration: none;
 }
 
-#trends {
+.trends {
   width: 80vw;
   margin: 30px auto;
   padding: 50px 30px;
@@ -58,7 +60,7 @@ body {
 
 .chart-container {
   position: relative; 
-  height:90%;
+  width:95%;
   margin: 0 auto auto auto;
 }
 

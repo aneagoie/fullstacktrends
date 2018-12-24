@@ -12,6 +12,7 @@ import './Chart.css';
                             data={data}
                             options={{
                                 maintainAspectRatio: true,
+                                responsive: true,
                                 legend: {
                                     position: legend
                                 },

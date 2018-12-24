@@ -89,6 +89,7 @@ class App extends Component {
 
     onLangClick = (lang) => {
         this.getData(lang);
+        this.setState({checkbox: lang})
     }
 
     onNavClick = (index) => {
@@ -97,6 +98,9 @@ class App extends Component {
             arrObj: dataExtractor(index)
         })
         this.getData(this.state.arrObj.langArray[0]);
+        this.setState({
+            checkbox: undefined
+        })
     }
 
     render() {
@@ -106,10 +110,10 @@ class App extends Component {
                 <Header />
                 <Navigation onNavClick={this.onNavClick}/>
 
-                <section id="trends">
-                    <h2 className="title">Top 5 Languages Of Web</h2>
+                <section className="trends">
+                    <h2 className="title">Top 5</h2>
                     <div className="chart-container">
-                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} />
+                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={this.state.checkbox} />
                         <h5 className="mb-4">Love by Community: {arrObj.devLoveArray[arrObj.langArray.indexOf(currentLang)] / 20} / 5</h5>
                         <Chart data={cData} />
                     </div>
