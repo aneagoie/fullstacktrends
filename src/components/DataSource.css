@@ -1,6 +1,6 @@
 .container-grid {
     display: grid;
-    width: 50%;
+    width: 45%;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 100px);
@@ -31,6 +31,10 @@
     display: none;
 }
 
+.source-chart {
+    margin-top: 40px;
+}
+
 @media only screen and (max-width: 1110px) {
   .arrow {
     display: none;
@@ -43,6 +47,9 @@
   }
   .container-grid {
     width: auto;
+  }
+  .source-chart {
+      margin-top: 0;
   }
 }
 
@@ -78,7 +85,7 @@ div > span {
 }
 
 .tooltip1 .top {
-    min-width:200px; 
+    min-width:200px;
     top:-20px;
     left:50%;
     transform:translate(-50%, -100%);

@@ -26,7 +26,7 @@ const Footer = () => {
                                 <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"><li>Zero To Mastery</li></a>
                                 <a href="https://github.com/aneagoie"><li>Andrei Neagoie</li></a>
                                 <a href="https://github.com/anantankur"><li>Ankur Anant</li></a>
-                                <a href="https://github.com/Dhaval1403"><li>Dhaval 1403</li></a>
+                                <a href="https://github.com/Dhaval1403"><li>Dhaval Mehta</li></a>
                                 <a href="https://github.com/MattCSmith"><li>Matt Smith</li></a>
                             </ul>
                         </div>
