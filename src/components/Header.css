@@ -24,5 +24,17 @@
 }
 
 .scroll {
-    background: rgba(255, 255, 255, 0.883)
+    background: rgba(255, 255, 255, 0.883);
+    height: 65px
+}
+
+.smLogo > a > img {
+    height: 40px;
+    position: relative;
+    top: -8px
+}
+
+.scroll > .nav-buttons {
+    position: relative;
+    top: -14px
 }
