@@ -4,6 +4,7 @@
     width: 100%;
     padding: 20px;
     display: flex;
+    z-index: 1;
 }
 
 .nav-buttons {
@@ -24,5 +25,5 @@
 }
 
 .scroll {
-    background: rgba(255, 255, 255, 0.883)
+    background: rgba(255, 255, 255, 1)
 }
