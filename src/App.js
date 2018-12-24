@@ -111,7 +111,7 @@ class App extends Component {
                 <Header />
                 <Navigation onNavClick={this.onNavClick}/>
 
-                <section id="trends">
+                <section className="trends">
                     <h2 className="title">Top 5 Languages Of Web</h2>
                     <div className="chart-container">
                         <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={this.state.checkbox} />

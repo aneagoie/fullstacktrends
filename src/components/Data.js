@@ -3,9 +3,11 @@ import DataSource from './DataSource';
 
 const Data = ({ chartData }) => {
     return (
-        <section id="data" className="p-5 m-5 text-center">
-            <h2 className="p-5">How we collect our data?</h2>
-            <DataSource chartData={chartData}/>
+        <section id="data" className="my-5 text-center">
+            <div className="trends">
+                <h2 className="title">How we collect our data?</h2>
+                <DataSource chartData={chartData} />
+            </div>
         </section>
     )
 }
