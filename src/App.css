@@ -9,8 +9,8 @@
 }
 
 /* Fonts and Imports */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 body {
   background-color: rgb(255, 255, 255);
   background-image: url("./images/parallax.svg");
@@ -18,6 +18,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 25px;
 }
 
 .button-primary {
@@ -41,9 +46,19 @@ body {
   text-decoration: none;
 }
 
+#trends {
+  width: 80vw;
+  margin: 30px auto;
+  padding: 50px 30px;
+  text-align: center;
+  background: #f0d6c886;
+  border: 1px solid #fff;
+  border-radius: 30px
+}
 .chart-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: relative; 
+  height:90%;
+  margin: 0 auto auto auto;
 }
 
 h2 {
