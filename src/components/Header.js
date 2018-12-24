@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <section >
-            <nav id="header" class="navbar navbar-expand-lg navbar-light fixed-top">
+            <nav id="header" class="navbar navbar-expand-md navbar-light fixed-top">
             <Link to="top" smooth={true} duration={800} offset={-131}><img src={logo} alt="logo" height="50" /></Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
