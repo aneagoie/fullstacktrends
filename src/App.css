@@ -46,7 +46,7 @@ body {
   text-decoration: none;
 }
 
-#trends {
+.trends {
   width: 80vw;
   margin: 30px auto;
   padding: 50px 30px;
