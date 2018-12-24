@@ -23,10 +23,16 @@
 .smLogo > a > img {
     height: 40px;
     position: relative;
-    top: -8px
 }
 
 .scroll > .nav-buttons {
     position: relative;
-    top: -14px
+}
+
+
+  @media only screen and (max-width: 800px) {
+    #header {
+        background: #fff
+    }
+
 }

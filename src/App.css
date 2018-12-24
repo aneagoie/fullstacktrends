@@ -19,7 +19,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.collapse.show {
+  background: #fff
+}
 .title {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 25px;
