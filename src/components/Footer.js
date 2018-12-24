@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-5 px-4">
+                        <div className="col-md-5 col-xs-12">
                             <a className="navbar-brand pb-3" href="/#"><img src={logo} alt="logo" height="50" /></a>
                             <p className="text-muted text-justify">Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile, Programming Languages, Backend</p>
                             <div className="socials text-white pt-2">
@@ -20,7 +20,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="credits col-md-7 px-5 text-right">
+                        <div className="credits col-md-7 col-xs-6">
                             <h5 className="pt-2">Brought to you by</h5>
                             <ul>
                                 <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"><li>Zero To Mastery</li></a>
