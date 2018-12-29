@@ -1,7 +1,7 @@
 {
   "main.css": "/fullstacktrends/static/css/main.13765f17.chunk.css",
-  "main.js": "/fullstacktrends/static/js/main.0e20fdaf.chunk.js",
-  "main.js.map": "/fullstacktrends/static/js/main.0e20fdaf.chunk.js.map",
+  "main.js": "/fullstacktrends/static/js/main.ab962cad.chunk.js",
+  "main.js.map": "/fullstacktrends/static/js/main.ab962cad.chunk.js.map",
   "static/js/1.a283ebb7.chunk.js": "/fullstacktrends/static/js/1.a283ebb7.chunk.js",
   "static/js/1.a283ebb7.chunk.js.map": "/fullstacktrends/static/js/1.a283ebb7.chunk.js.map",
   "runtime~main.js": "/fullstacktrends/static/js/runtime~main.a6c566ba.js",
@@ -13,6 +13,6 @@
   "static/media/bg-wave-desktop.svg": "/fullstacktrends/static/media/bg-wave-desktop.3e3206c5.svg",
   "static/css/main.13765f17.chunk.css.map": "/fullstacktrends/static/css/main.13765f17.chunk.css.map",
   "index.html": "/fullstacktrends/index.html",
-  "precache-manifest.8d0ffa525cfd258d343710e88ad20e05.js": "/fullstacktrends/precache-manifest.8d0ffa525cfd258d343710e88ad20e05.js",
+  "precache-manifest.98719e8e53d3af23b4bdd9be081604e1.js": "/fullstacktrends/precache-manifest.98719e8e53d3af23b4bdd9be081604e1.js",
   "service-worker.js": "/fullstacktrends/service-worker.js"
 }
