@@ -46,7 +46,7 @@ class App extends Component {
         super();
         this.state = {
             cData: {},
-            currentLang: chartData[currentCatIndexGlobal][0].name,
+            currentTopic: chartData[currentCatIndexGlobal][0].name,
             /*
             currentCatIndex :-
                 Web---------------------> 0
@@ -54,20 +54,20 @@ class App extends Component {
                 Programming Language----> 2
                 Backend-----------------> 3
             */
-            arrObj: dataExtractor(currentCatIndexGlobal),
+            rawData: dataExtractor(currentCatIndexGlobal),
         }
     }
 
     componentDidMount() {
-        this.getData(this.state.currentLang);
+        this.getData(this.state.currentTopic);
     }
 
     getData(currentSelection) {
-        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.arrObj;
+        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
-            currentLang: currentSelection,
+            currentTopic: currentSelection,
             cData: {
                 datasets: [
                     {
@@ -87,38 +87,32 @@ class App extends Component {
         });
     }
 
-    onLangClick = (lang) => {
-        this.getData(lang);
-        this.setState({checkbox: lang})
+    onTopicClick = (topic) => {
+        this.getData(topic);
     }
 
     onNavClick = (index) => {
         currentCatIndexGlobal = index;
         this.setState({
-            arrObj: dataExtractor(index)
+            rawData: dataExtractor(index)
         })
-        this.getData(this.state.arrObj.langArray[0]);
-        this.setState({
-            checkbox: undefined
-        })
+        this.getData(this.state.rawData.langArray[0]);
     }
 
     render() {
-        const {cData, arrObj, currentLang} = this.state;
+        const {cData, rawData, currentTopic} = this.state;
         return (
             <div id="top">
                 <Header />
                 <Navigation onNavClick={this.onNavClick}/>
-
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
-                        <Rank langArray={arrObj.langArray} onLangClick={this.onLangClick} checkbox={this.state.checkbox} />
-                        <h5 className="mb-4">Love by Community: {arrObj.devLoveArray[arrObj.langArray.indexOf(currentLang)] / 20} / 5</h5>
+                        <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
+                        <h5 className="mb-4">Love by Community: {rawData.devLoveArray[rawData.langArray.indexOf(currentTopic)] / 20} / 5</h5>
                         <Chart data={cData} />
                     </div>
                 </section>
-
                 <Newsletter />
                 <Data chartData={cData} location={false} />
                 <Footer />

@@ -13,6 +13,12 @@ import './Chart.css';
                             options={{
                                 maintainAspectRatio: true,
                                 responsive: true,
+                                scale: {
+                                    ticks: {
+                                        suggestedMin: 0,
+                                        suggestedMax: 50
+                                    }
+                                },
                                 legend: {
                                     position: legend
                                 },
