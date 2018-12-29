@@ -3,7 +3,7 @@ import {Polar} from 'react-chartjs-2';
 
 const data = {
   datasets: [{
-    data: [11, 16, 7, 3, 14],
+    data: [11, 16, 9, 14],
     backgroundColor: [
         'rgba(255,99,132,0.7)',
         'rgba(75,192,192,0.7)',
@@ -13,13 +13,14 @@ const data = {
     ],
     label: 'Some Dataset'
   }],
-  labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue']
+  labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
 };
 
 const SourceChart = () => {
 
     return(
         <div>
+           <h5 className="mb-4">Love by Community: 4 / 5</h5>
            <Polar
                 data={data}
                 height={300}

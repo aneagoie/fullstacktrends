@@ -24,7 +24,6 @@ const Footer = () => {
                             <h5 className="pt-2">Brought to you by</h5>
                             <ul>
                                 <a href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"><li>Zero To Mastery</li></a>
-                                <a href="https://github.com/aneagoie"><li>Andrei Neagoie</li></a>
                                 <a href="https://github.com/anantankur"><li>Ankur Anant</li></a>
                                 <a href="https://github.com/Dhaval1403"><li>Dhaval Mehta</li></a>
                                 <a href="https://github.com/MattCSmith"><li>Matt Smith</li></a>

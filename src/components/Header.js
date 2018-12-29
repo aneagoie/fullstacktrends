@@ -7,13 +7,13 @@ const Header = () => {
 
     return (
         <section >
-            <nav id="header" class="navbar navbar-expand-md navbar-light fixed-top">
+            <nav id="header" className="navbar navbar-expand-md navbar-light fixed-top">
             <Link to="top" smooth={true} duration={800} offset={-131}><img src={logo} alt="logo" height="50" /></Link>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav nav-buttons">
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav nav-buttons">
                         <Link to="newsletter" className="button-primary" spy={true} activeClass="active" smooth={true} duration={800} offset={0}>Newsletter</Link>
                         <Link to="data" className="button-primary" spy={true} activeClass="active" smooth={true} duration={800} offset={0}>Data</Link>  
                     </div>
