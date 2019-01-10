@@ -2,13 +2,15 @@
   "name": "fullstacktrends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.fullstacktrends.com",
+  "homepage": "https://zeroDevs.github.io/coding_challenge-13",
   "dependencies": {
     "chart.js": "^2.7.3",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "react": "^16.6.3",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1",
+    "react-scripts": "^2.1.3",
     "react-scroll": "^1.7.10"
   },
   "scripts": {
@@ -29,6 +31,14 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.15.3",
+    "tachyons": "^4.10.0"
   }
 }

@@ -1,45 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Chart from './components/Chart';
-import Rank from './components/Rank';
-import Newsletter from './components/Newsletter';
-import Data from './components/Data';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
+import Chart from './components/Chart/Chart';
+import Rank from './components/Rank/Rank';
+import Newsletter from './components/Newsletter/Newsletter';
+import Data from './components/Data/Data';
+import Footer from './components/Footer/Footer';
 import chartData from './data.json';
 
 //update variable below according to tabs
 let currentCatIndexGlobal = 0;
 
 const dataExtractor = (catIndex) => {
-
-    let lArray = [];
-    let dlArray = [];
-    let gArray = [];
-    let usArray = [];
-    let supArray = [];
-    let remArray = [];
-
-    for (let i = 0; i < chartData[catIndex].length; i++) {
-        lArray.push(chartData[catIndex][i].name);
-        dlArray.push(chartData[catIndex][i].devLove);
-        gArray.push(chartData[catIndex][i].gJobDemand);
-        usArray.push(chartData[catIndex][i].usJobDemand);
-        supArray.push(chartData[catIndex][i].supJobDemand);
-        remArray.push(chartData[catIndex][i].remJobDemand);
-
-    }
-
-    return ({
-        langArray: lArray,
-        devLoveArray: dlArray,
-        gJobArray: gArray,
-        usJobArray: usArray,
-        supJobArray: supArray,
-        remJobArray: remArray,
-    })
-}
+    return chartData[catIndex].reduce((data, technology) => {
+        data.langArray.push(technology.name);
+        data.devLoveArray.push(technology.devLove);
+        data.gJobArray.push(technology.gJobDemand);
+        data.usJobArray.push(technology.usJobDemand);
+        data.supJobArray.push(technology.supJobDemand);
+        data.remJobArray.push(technology.remJobDemand);
+        return data;
+    }, {
+        langArray: [],
+        devLoveArray: [],
+        gJobArray: [],
+        usJobArray: [],
+        supJobArray: [],
+        remJobArray: []
+    });
+};
 
 class App extends Component {
     constructor() {
@@ -47,23 +37,26 @@ class App extends Component {
         this.state = {
             cData: {},
             currentTopic: chartData[currentCatIndexGlobal][0].name,
-            /*
-            currentCatIndex :-
-                Web---------------------> 0
-                Mobile------------------> 1
-                Programming Language----> 2
-                Backend-----------------> 3
-            */
             rawData: dataExtractor(currentCatIndexGlobal),
+            contributors: []
         }
+    }
+
+    fetchContributors = async () => {
+        await fetch('https://api.github.com/repos/zeroDevs/coding_challenge-13/contributors')
+            .then(res => res.json())
+            .then(json => this.setState({
+                contributors: json
+            }));
     }
 
     componentDidMount() {
         this.getData(this.state.currentTopic);
+        this.fetchContributors()
     }
 
     getData(currentSelection) {
-        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.rawData;
+        const { langArray, gJobArray, usJobArray, supJobArray, remJobArray } = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
@@ -95,16 +88,18 @@ class App extends Component {
         currentCatIndexGlobal = index;
         this.setState({
             rawData: dataExtractor(index)
-        })
-        this.getData(this.state.rawData.langArray[0]);
+        },
+            () => {
+                this.getData(this.state.rawData.langArray[0]);
+            })
     }
 
     render() {
-        const {cData, rawData, currentTopic} = this.state;
+        const { cData, rawData, currentTopic, contributors } = this.state;
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick}/>
+                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
@@ -115,7 +110,7 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data chartData={cData} location={false} />
-                <Footer />
+                <Footer contrib={contributors} />
             </div>
         );
     }
