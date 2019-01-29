@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
+import Modal from '../Modal/Modal';
 import Contrib from './contributors';
 
 const Footer = ({ contrib }) => (
@@ -15,8 +16,8 @@ const Footer = ({ contrib }) => (
               <img src={logo} alt="logo" height="50" />
             </a>
             <p className="text-muted text-left">
-              Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile,
-              Programming Languages, Backend
+              Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile,
+              Programming Languages and Backend
             </p>
             <div className="socials text-white pt-2">
               <a href="https://medium.com/zerotomastery" target="_blank" rel="noopener noreferrer">
@@ -38,29 +39,18 @@ const Footer = ({ contrib }) => (
           <div className="credits col-md-7 col-xs-6">
             <h5 className="pt-2">Brought to you by</h5>
             <ul>
-              <a
-                href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Modal>
                 <li className="grow">Zero To Mastery</li>
-              </a>
-              <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
-                <li className="grow">Ankur Anant</li>
-              </a>
-              <a href="https://github.com/Dhaval1403" target="_blank" rel="noopener noreferrer">
-                <li className="grow">Dhaval Mehta</li>
-              </a>
-              <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
-                <li className="grow">Matt Smith</li>
-              </a>
-              <Contrib contributors={contrib} />
+              </Modal>
+              <li className="grow">
+                <Contrib contributors={contrib} />
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-
+  
     <div className="copyright">
       © {new Date().getFullYear()} FullStack Trends. All Rights Reserved
     </div>

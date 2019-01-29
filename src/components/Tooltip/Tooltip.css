@@ -1,0 +1,96 @@
+.tooltipTrigger:hover .tooltipTextContainer {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltipTextContainer {
+    position: absolute;
+    width: 45%;
+    min-width: 300px;
+    transform: translate(-50%, 0);
+    top: 50px;
+    left: 50%;
+    z-index: 2;
+}
+
+.source-chart .tooltipTextContainer {
+    left: 50%;
+}
+
+.tooltipText {
+    background-color: rgba(0, 0, 0, .85);
+    color: #fff;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.tooltipTrigger {
+    display: flex;
+    flex-direction: column;
+}
+
+.tooltipTrigger h5 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+}
+
+.tooltipTrigger.bottom {
+    top: 135px;
+    left: 0;
+}
+
+.arrow-bottom {
+    border-width: 0 10px 10px 10px;
+    border-color: transparent;
+    border-bottom-color: rgba(0, 0, 0, .85);
+    border-style: solid;
+}
+
+.tooltipContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 568px) {
+    .tooltipTrigger {
+        flex-direction: row;
+    }
+    .tooltipTrigger.bottom {
+        top: 50px;
+        left: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .source-chart .tooltipTextContainer {
+        left: 20vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .source-chart .tooltipTextContainer {
+        left: 25vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .source-chart .tooltipTextContainer {
+        left: 30vw;
+    }
+}
+
+@media (max-width: 568px) {
+    .source-chart .tooltipTextContainer {
+        left: 35vw;
+        top: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .source-chart .tooltipTextContainer {
+        left: 40vw;
+    }
+}
