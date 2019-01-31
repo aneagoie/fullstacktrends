@@ -2,7 +2,7 @@
   "name": "fullstacktrends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.fullstacktrends.com",
+  "homepage": "https://zeroDevs.github.io/coding_challenge-13",
   "dependencies": {
     "chart.js": "^2.7.3",
     "enzyme": "^3.8.0",
